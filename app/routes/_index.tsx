@@ -31,7 +31,7 @@ export default function Index() {
           <Card className="relative group overflow-hidden rounded-lg">
             <CardContent className="p-1 bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 bg-300% animate-gradient">
               <Button asChild>
-                <Link to="/login">Star on Github</Link>
+                <Link to="https://github.com/rajeshdavidbabu/remix-shadcn-starter">Star on Github</Link>
               </Button>
             </CardContent>
           </Card>
