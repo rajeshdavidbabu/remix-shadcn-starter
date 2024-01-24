@@ -3,6 +3,10 @@ import { Link } from "@remix-run/react";
 import { Command } from "lucide-react";
 import { Card, CardContent } from "~/components/ui/card";
 import { ThemeToggle } from "./resources.theme-toggle";
+import { Hero3DCard } from "~/components/hero-3d-card";
+import { TextRevealCardPreview } from "~/components/text-reveal-preview";
+import { AnimatedTooltipPreview } from "~/components/animated-preview";
+import { HeroParallaxDemo } from "~/components/parallax-preview";
 
 export default function Index() {
   return (
@@ -21,17 +25,31 @@ export default function Index() {
             <span className="font-extrabold bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient">
               Simple Starter
             </span>{" "}
-            For Remix and Shadcn-ui
+            For Remix, Shadcn-ui and{" "}
+            <Link
+              to="https://ui.aceternity.com"
+              className="hover:text-blue-500"
+            >
+              Aceternity-ui
+            </Link>
           </h1>
 
           <p className="text-muted-foreground font-bold mt-2">
             With optimistic dark-mode
           </p>
+          <div>
+            <Hero3DCard />
+            <AnimatedTooltipPreview />
+            <HeroParallaxDemo />
+            <TextRevealCardPreview />
+          </div>
 
           <Card className="relative group overflow-hidden rounded-lg">
             <CardContent className="p-1 bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 bg-300% animate-gradient">
               <Button asChild>
-                <Link to="https://github.com/rajeshdavidbabu/remix-shadcn-starter">Star on Github</Link>
+                <Link to="https://github.com/rajeshdavidbabu/remix-shadcn-starter">
+                  Star on Github
+                </Link>
               </Button>
             </CardContent>
           </Card>
